@@ -1,13 +1,11 @@
 #' @importFrom spam cov.mat
 cov.mat32 <- function(h, theta) {
-  stopifnot(length(theta) == 2L)
   # smoothness nu = 3/2
   spam::cov.mat(h, theta = c(theta, 3/2))
 }
 
 #' @importFrom spam cov.mat
 cov.mat52 <- function(h, theta) {
-  stopifnot(length(theta) == 2L)
   # smoothness nu = 5/2
   spam::cov.mat(h, theta = c(theta, 5/2))
 }
